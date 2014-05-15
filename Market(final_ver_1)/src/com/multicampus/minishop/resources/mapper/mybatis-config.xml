@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE configuration
+ 		 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ 		"http://mybatis.org/dtd/mybatis-3-config.dtd">
+					
+
+<configuration>
+
+	<settings>
+		<setting name="callSettersOnNulls" value="false"/>
+	</settings>
+	
+	<typeAliases>
+		<typeAlias alias="user" type="com.multicampus.minishop.services.domain.User"/>
+		<typeAlias alias="product" type="com.multicampus.minishop.services.domain.Product"/>
+		<typeAlias alias="purchase" type="com.multicampus.minishop.services.domain.Purchase"/>
+		<typeAlias alias="search" type="com.multicampus.minishop.common.Search"/>
+		
+	</typeAliases>
+
+  <mappers>
+    <mapper resource="com/multicampus/minishop/resources/mapper/UserMapper.xml"/> 
+    <mapper resource="com/multicampus/minishop/resources/mapper/ProductMapper.xml"/>
+    <mapper resource="com/multicampus/minishop/resources/mapper/PurchaseMapper.xml"/>
+  </mappers>
+
+</configuration>
