@@ -8,7 +8,7 @@
 <mapper namespace="Mapper">
 
 	<resultMap id="localSelectMap" type="local">
-		<result property="localNo" 	column="local_no" 	jdbcType="INTEGER"/>
+		<result property="localNo" 		column="local_no" 		jdbcType="INTEGER"/>
   		<result property="localName" 	column="local_name" 	jdbcType="VARCHAR"/>
   		<result property="gpsX" 		column="gps_x" 			jdbcType="VARCHAR"/>
   		<result property="gpsY" 		column="gps_y" 			jdbcType="VARCHAR"/>
