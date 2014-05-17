@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+		PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		
+		
+<mapper namespace="Mapper">
+
+	<resultMap id="localSelectMap" type="local">
+		<result property="localNo" 		column="local_no" 		jdbcType="INTEGER"/>
+  		<result property="localName" 	column="local_name" 	jdbcType="VARCHAR"/>
+  		<result property="gpsX" 		column="gps_x" 			jdbcType="VARCHAR"/>
+  		<result property="gpsY" 		column="gps_y" 			jdbcType="VARCHAR"/>
+  	</resultMap>
+  	
+  	<resultMap id="dataSelectMap" type="data">
+  		<result property="dataFileAdd" 	column="data_file_add" 	jdbcType="VARCHAR"/>
+  		<result property="dataType" 	column="data_type" 		jdbcType="INTEGER"/>
+  	</resultMap>
+  	
+	<select id="getLocalInfo" resultMap="localSelectMap">
+  		SELECT
+		local_name, gps_x, gps_y 
+		FROM local_info
+  	</select>
+  	
+  	<select id="getDataByLocal" parameterType="int" resultMap="dataSelectMap">
+  		SELECT
+		data_file_add, data_type
+		FROM data_info
+		WHERE local_no=#{value}
+  	</select>
+
+	<select id="getDataByBeacon" parameterType="int" resultMap="dataSelectMap">
+  		SELECT
+		data_file_add, data_type
+		FROM data_info
+		WHERE region_no=#{value}
+  	</select>
+  	
+  	<select id="findBeacon" parameterType="beacon" resultType="beacon">
+  		SELECT
+		uuid, major, minor
+		FROM region_info
+		WHERE uuid=#{uuid} AND major=#{major} AND minor=#{minor}
+  	</select>
+  	
+  	
+  	
+</mapper>
