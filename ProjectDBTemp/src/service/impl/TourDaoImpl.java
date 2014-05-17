@@ -2,14 +2,14 @@ package service.impl;
 
 import java.util.List;
 
-import service.TourDao;
+import service.dao.TourDao;
 import service.domain.Beacon;
 
 public class TourDaoImpl implements TourDao {
 
 	@Override
 	public List<Object> getLocalInfo() throws Exception {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 
