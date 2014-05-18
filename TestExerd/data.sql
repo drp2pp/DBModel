@@ -35,7 +35,8 @@ VALUES (TOUR_LOCAL.nextval, 'manager7', '∞Ê»∏∑Á', '37.579736','126.975956');
 INSERT INTO local_info (local_no, manager_id, local_name, gps_x, gps_y)
 VALUES (TOUR_LOCAL.nextval, 'manager7', 'µø±√', '37.578911','126.978172');
 
-
+INSERT INTO data_info (data_no, data_file_add, data_type, local_no)
+VALUES (TOUR_DATA.nextval, 'Path1', '1', '1')
 
 
 /*INSERT INTO region_info (region_no, region_name, uuid, major, minor, local_no)

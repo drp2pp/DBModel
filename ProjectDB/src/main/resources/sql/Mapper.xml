@@ -21,7 +21,7 @@
   	
 	<select id="getLocalInfo" resultMap="localSelectMap">
   		SELECT
-		local_name, gps_x, gps_y 
+		local_no, local_name, gps_x, gps_y 
 		FROM local_info
   	</select>
   	

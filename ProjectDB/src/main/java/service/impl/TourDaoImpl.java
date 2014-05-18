@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
 
 import service.TourDao;
 import service.domain.Beacon;
+import service.domain.Data;
+import service.domain.Local;
 
 @Repository("tourDaoImpl")
 public class TourDaoImpl implements TourDao {
@@ -29,17 +31,17 @@ public class TourDaoImpl implements TourDao {
 	
 	///Method
 	@Override
-	public List<Object> getLocalInfo() throws Exception {
+	public List<Local> getLocalInfo() throws Exception {
 		return sqlSession.selectList("Mapper.getLocalInfo");
 	}
 
 	@Override
-	public List<Object> getDataByLocal(int localNo) throws Exception {
+	public List<Data> getDataByLocal(int localNo) throws Exception {
 		return sqlSession.selectList("Mapper.getDataByLocal", localNo);
 	}
 
 	@Override
-	public List<Object> getDataByBeacon(int regionNo) throws Exception {
+	public List<Data> getDataByBeacon(int regionNo) throws Exception {
 		return sqlSession.selectList("Mapper.getDataByBeacon", regionNo);
 	}
 
