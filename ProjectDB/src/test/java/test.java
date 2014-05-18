@@ -18,20 +18,24 @@ import service.domain.Local;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:config/commonservice.xml"})
 public class test {
-	/*
+	
 	@Autowired
 	@Qualifier("tourServiceImpl")
 	private TourService tourService;
-	*/
+	
 	@Autowired
 	@Qualifier("tourDaoImpl")
 	private TourDao tourDao;
 	
 	@Test
-	public void testgetlocal() throws Exception{
-		
-		List<Object> list = tourDao.getLocalInfo();
-		System.out.println();
+	public void testGetLocal() throws Exception{
+		System.out.println(tourService.getLocalInfo());
+		System.out.println("\n");
+	}
+	
+	@Test
+	public void testGetData() throws Exception{
+		System.out.println(tourService.getDataByLocal(tourService.getLocalInfo().get(0).getLocalNo()));
 	}
 		
 }

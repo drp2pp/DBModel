@@ -1,6 +1,8 @@
 package service.impl;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,8 @@ import org.springframework.stereotype.Repository;
 import service.TourDao;
 import service.TourService;
 import service.domain.Beacon;
+import service.domain.Data;
+import service.domain.Local;
 
 @Repository("tourServiceImpl")
 public class TourServiceImpl implements TourService {
@@ -23,23 +27,25 @@ public class TourServiceImpl implements TourService {
 	}
 	
 	///Constructor
-	public TourServiceImpl(TourDao tourDao) {
+	public TourServiceImpl() {
 		super();
-		this.tourDao = tourDao;
+		// TODO Auto-generated constructor stub
 	}
 
 	///Method
 	@Override
-	public List<Object> getLocalInfo() throws Exception {
-		return tourDao.getLocalInfo();
+	public List<Local> getLocalInfo() throws Exception {
+		List<Local> list = tourDao.getLocalInfo();
+		return list;
 	}
+	
 	@Override
-	public List<Object> getDataByLocal(int localNo) throws Exception {
+	public List<Data> getDataByLocal(int localNo) throws Exception {
 		return tourDao.getDataByLocal(localNo);
 	}
 
 	@Override
-	public List<Object> getDataByBeacon(int regionNo) throws Exception {
+	public List<Data> getDataByBeacon(int regionNo) throws Exception {
 		return tourDao.getDataByBeacon(regionNo);
 	}
 
