@@ -39,5 +39,11 @@ public class Data {
 		this.regoinNo = regoinNo;
 	}
 	
+	@Override
+	public String toString() {
+		return "Data [dataNo =" + dataNo + ", dataFileAdd=" + dataFileAdd + ", dataType=" + dataType 
+				+ ", localNo=" + localNo + ", regoinNo=" + regoinNo + "]";
+	}
+	
 	
 }

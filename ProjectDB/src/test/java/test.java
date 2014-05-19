@@ -30,11 +30,11 @@ public class test {
 	@Test
 	public void testGetLocal() throws Exception{
 		System.out.println(tourService.getLocalInfo());
-		System.out.println("\n");
 	}
 	
 	@Test
 	public void testGetData() throws Exception{
+		System.out.println("localNo : "+tourService.getLocalInfo().get(0).getLocalNo());
 		System.out.println(tourService.getDataByLocal(tourService.getLocalInfo().get(0).getLocalNo()));
 	}
 		

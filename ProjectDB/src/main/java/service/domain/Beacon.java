@@ -25,5 +25,10 @@ public class Beacon {
 		this.minor = minor;
 	}
 	
+	@Override
+	public String toString() {
+		return "Beacon [uuid =" + uuid + ", major=" + major + ", minor=" + minor + "]";
+	}
+	
 	
 }
