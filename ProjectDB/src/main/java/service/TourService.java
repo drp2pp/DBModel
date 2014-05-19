@@ -12,9 +12,11 @@ public interface TourService {
 	public List<Local> getLocalInfo() throws Exception;		
 	
 	public List<Data> getDataByLocal(int localNo) throws Exception;	
-	public List<Data> getDataByBeacon(int regionNo) throws Exception;	
+	public List<Data> getDataByBeacon(Beacon beacon) throws Exception;	
 	
 	public Beacon findBeacon(Beacon beacon) throws Exception;	
 	//public void updateRegionInfo(String managerId) throws Exception;
+	
+	public void addData(Data data) throws Exception;
 	
 }

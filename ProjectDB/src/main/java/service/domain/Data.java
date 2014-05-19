@@ -3,10 +3,10 @@ package service.domain;
 public class Data {
 	
 	private int dataNo;
-	private String dataFileAdd;
+	private String dataPath;
 	private int dataType;
 	private int localNo;
-	private int regoinNo;
+	private int regionNo;
 	
 	public int getDataNo() {
 		return dataNo;
@@ -15,10 +15,10 @@ public class Data {
 		this.dataNo = dataNo;
 	}
 	public String getDataFileAdd() {
-		return dataFileAdd;
+		return dataPath;
 	}
 	public void setDataFileAdd(String dataFileAdd) {
-		this.dataFileAdd = dataFileAdd;
+		this.dataPath = dataFileAdd;
 	}
 	public int getDataType() {
 		return dataType;
@@ -32,17 +32,17 @@ public class Data {
 	public void setLocalNo(int localNo) {
 		this.localNo = localNo;
 	}
-	public int getRegoinNo() {
-		return regoinNo;
+	public int getRegionNo() {
+		return regionNo;
 	}
-	public void setRegoinNo(int regoinNo) {
-		this.regoinNo = regoinNo;
+	public void setRegionNo(int regoinNo) {
+		this.regionNo = regoinNo;
 	}
 	
 	@Override
 	public String toString() {
-		return "Data [dataNo =" + dataNo + ", dataFileAdd=" + dataFileAdd + ", dataType=" + dataType 
-				+ ", localNo=" + localNo + ", regoinNo=" + regoinNo + "]";
+		return "Data [dataNo =" + dataNo + ", dataFileAdd=" + dataPath + ", dataType=" + dataType 
+				+ ", localNo=" + localNo + ", regionNo=" + regionNo + "]";
 	}
 	
 	

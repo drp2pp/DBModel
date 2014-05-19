@@ -45,13 +45,17 @@ public class TourServiceImpl implements TourService {
 	}
 
 	@Override
-	public List<Data> getDataByBeacon(int regionNo) throws Exception {
-		return tourDao.getDataByBeacon(regionNo);
+	public List<Data> getDataByBeacon(Beacon beacon) throws Exception {
+		return tourDao.getDataByBeacon(beacon);
 	}
 
 	@Override
 	public Beacon findBeacon(Beacon beacon) throws Exception {
 		return tourDao.findBeacon(beacon);
+	}
+
+	@Override
+	public void addData(Data data) throws Exception {
 	}
 
 }

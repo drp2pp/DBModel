@@ -41,13 +41,20 @@ public class TourDaoImpl implements TourDao {
 	}
 
 	@Override
-	public List<Data> getDataByBeacon(int regionNo) throws Exception {
-		return sqlSession.selectList("Mapper.getDataByBeacon", regionNo);
+	public List<Data> getDataByBeacon(Beacon beacon) throws Exception {
+		return sqlSession.selectList("Mapper.getDataByBeacon", beacon);
 	}
 
 	@Override
 	public Beacon findBeacon(Beacon beacon) throws Exception {
 		return sqlSession.selectOne("Mapper.findBeacon", beacon);
 	}
+
+	@Override
+	public void addData(Data data) throws Exception {	
+		sqlSession.insert("Mapper.insertData", data);
+	}
+	
+	
 
 }
