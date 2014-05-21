@@ -47,10 +47,10 @@ VALUES (TOUR_LOCAL.nextval, 'manager10', 'ªÔº∫¿¸¿⁄', '37.496631','127.026948');
 
 /* µ•¿Ã≈Õ ¡§∫∏ */
 /* data_type 1 text , 2 image, 3 voice, 4 vod*/
+INSERT INTO data_info (data_no, data_path, data_type, local_no)
+VALUES (TOUR_DATA.nextval, '±§»≠πÆ.jpg', '2', '1');
 INSERT INTO data_info (data_no, data_path, data_type, local_no, region_no)
-VALUES (TOUR_DATA.nextval, '±§»≠πÆ', '2', '1', '1');
-INSERT INTO data_info (data_no, data_path, data_type, local_no, region_no)
-VALUES (TOUR_DATA.nextval, 'Path2', '1', '1', '1');
+VALUES (TOUR_DATA.nextval, '±§»≠πÆ', '1', '1', '1');
 INSERT INTO data_info (data_no, data_path, data_type, local_no, region_no)
 VALUES (TOUR_DATA.nextval, 'Path3', '3', '1', '1');
 INSERT INTO data_info (data_no, data_path, data_type, local_no)

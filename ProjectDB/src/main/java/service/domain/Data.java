@@ -14,10 +14,10 @@ public class Data {
 	public void setDataNo(int dataNo) {
 		this.dataNo = dataNo;
 	}
-	public String getDataFileAdd() {
+	public String getDataPath() {
 		return dataPath;
 	}
-	public void setDataFileAdd(String dataFileAdd) {
+	public void setDataPath(String dataFileAdd) {
 		this.dataPath = dataFileAdd;
 	}
 	public int getDataType() {
