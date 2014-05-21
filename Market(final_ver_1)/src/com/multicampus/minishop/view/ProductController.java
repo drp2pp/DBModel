@@ -41,7 +41,6 @@ public class ProductController {
 	@RequestMapping
 	public String addProduct(@ModelAttribute("provo") Product provo) throws Exception {
 		productService.addProduct(provo);
-		
 		return "/minishop/product/listProduct";
 	}
 	
@@ -61,7 +60,6 @@ public class ProductController {
 		model.addAttribute("search", search);
 		model.addAttribute("page", page);
 		model.addAttribute("menu", menu);
-		
 		return "/product/listProductView.jsp?menu="+menu;
 	}
 	
@@ -73,7 +71,6 @@ public class ProductController {
 		Cookie cookie=new Cookie("history",prodNo+","+history);
 		cookie.setMaxAge(-1);
 		response.addCookie(cookie);
-		
 		//execute
 		model.addAttribute("provo", productService.getProduct(prodNo));
 		return "/product/getProductView.jsp";

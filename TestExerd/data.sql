@@ -35,9 +35,20 @@ VALUES (TOUR_LOCAL.nextval, 'manager7', '경회루', '37.579736','126.975956');
 INSERT INTO local_info (local_no, manager_id, local_name, gps_x, gps_y)
 VALUES (TOUR_LOCAL.nextval, 'manager7', '동궁', '37.578911','126.978172');
 
+/* 비트아카데미 별관 근처 정보*/
+INSERT INTO local_info (local_no, manager_id, local_name, gps_x, gps_y)
+VALUES (TOUR_LOCAL.nextval, 'manager8', '비트컴퓨터', '37.494618','127.027593');
+
+INSERT INTO local_info (local_no, manager_id, local_name, gps_x, gps_y)
+VALUES (TOUR_LOCAL.nextval, 'manager9', '강남역5번출구', '37.495518','127.028496');
+
+INSERT INTO local_info (local_no, manager_id, local_name, gps_x, gps_y)
+VALUES (TOUR_LOCAL.nextval, 'manager10', '삼성전자', '37.496631','127.026948');
+
+/* 데이터 정보 */
 /* data_type 1 text , 2 image, 3 voice, 4 vod*/
 INSERT INTO data_info (data_no, data_path, data_type, local_no, region_no)
-VALUES (TOUR_DATA.nextval, '광화문.jpg', '2', '1');
+VALUES (TOUR_DATA.nextval, '광화문', '2', '1', '1');
 INSERT INTO data_info (data_no, data_path, data_type, local_no, region_no)
 VALUES (TOUR_DATA.nextval, 'Path2', '1', '1', '1');
 INSERT INTO data_info (data_no, data_path, data_type, local_no, region_no)
@@ -49,5 +60,6 @@ VALUES (TOUR_DATA.nextval, '흥례문.jpg', '2', '2');
 INSERT INTO data_info (data_no, data_path, data_type, local_no, region_no)
 VALUES (TOUR_DATA.nextval, '근정전.jpg', '2', '3', '3');
 
+/*지역(Beacon)정보*/
 INSERT INTO region_info (region_no, region_name, uuid, major, minor, local_no)
 VALUES (TOUR_REGION.nextval, '광화문', '8492e75f-4fd6-469d-b132-043-fe94921d8', '11305', '19481', '1');
