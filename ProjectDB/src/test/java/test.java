@@ -1,7 +1,5 @@
-import java.util.List;
-import java.util.Map;
 
-import junit.framework.Assert;
+import java.util.Map;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,7 +13,6 @@ import service.TourDao;
 import service.TourService;
 import service.domain.Beacon;
 import service.domain.Data;
-import service.domain.Local;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
